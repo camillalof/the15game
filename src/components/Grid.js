@@ -1,0 +1,24 @@
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import { Cell } from './Cell'
+import '../index.css'
+
+export const Grid = ({ items, onClick }) => {
+  return (
+    <div className="grid">
+      {items.map((item, index) => (
+        <Cell
+          key={index}
+          index={index}
+          number={item}
+          onClick={() => onClick(index)}/>
+      ))}
+    </div>
+  )
+}
+Grid.propTypes = {
+  items: PropTypes.array,
+  onClick: PropTypes.func,
+}

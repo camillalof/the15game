@@ -1,0 +1,108 @@
+/*OVERALL APP*/
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*APP*/
+
+.app {
+  width: 100vw; /*1vw = 1% of viewport width.*/
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*PUZZLE*/
+
+.win {
+  width: 300px;
+  height: 300px;
+  color: black;
+  background: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*GRID*/ 
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1px;
+  width: 300px; 
+  height: 300px;
+  background: #d3d3d3;
+  border: 1px solid #d3d3d3;
+}
+
+/*CONTROLS*/ 
+
+.controls {
+  margin-top: 25px;
+}
+
+.controls button {
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 1rem 3rem;
+  margin: 5px;
+}
+
+/*CELL*/
+
+.cell {
+  flex: 1 0 22%;
+  margin: 1px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: black;
+  background: #add8e6;
+  font-size: 38px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cell-valid {
+  background: #add8e6;
+}
+
+.cell-void {
+  visibility: hidden;
+}
+
+@media (min-width: 668px) {
+
+  /*GRID*/ 
+
+  .grid {
+    width: 400px; 
+    height: 400px;
+  }
+
+  /*CONTROLS*/ 
+
+  .controls button {
+    font-size: 25px;
+    padding: 1rem 3rem;
+    margin: 5px;
+  }
+
+  /*PUZZLE*/
+
+  .win {
+    width: 400px;
+    height: 400px;
+  }
+}
